@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-REPLACE_ME_WITH_A_SECURE_KEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fall-risk-predictor.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [

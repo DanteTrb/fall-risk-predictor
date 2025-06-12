@@ -7,4 +7,4 @@ scikit-learn
 shap
 xgboost
 joblib
-
+django-cors-headers

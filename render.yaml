@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fallrisk-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn fallriskpredictor.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: fallriskpredictor.settings
+      - key: PYTHON_VERSION
+        value: 3.11

@@ -36,7 +36,13 @@ const PatientForm = () => {
       .then(res => setRanges(res.data))
       .catch(err => console.error(err));
   }, []);
-  
+
+  // ✅ AGGIUNTA la funzione handleChange
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -45,7 +51,7 @@ const PatientForm = () => {
     } catch (error) {
       console.error(error);
     }
-  };  
+  };
 
   const inputStyle = {
     padding: '6px',

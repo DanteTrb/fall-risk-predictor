@@ -1,16 +1,14 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import joblib
-import pandas as pd  # ✅ Aggiunto
+import pandas as pd
 import json
 import os
 
-# Percorsi relativi
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, 'fallrisk_pipeline.pkl')
 RANGE_PATH = os.path.join(BASE_DIR, 'ranges_fallers_top10.json')
 
-# Caricamento una tantum
 pipeline = joblib.load(MODEL_PATH)
 with open(RANGE_PATH, 'r') as f:
     ranges = json.load(f)
@@ -24,8 +22,11 @@ def predict_fall_risk(request):
             'age_onset', 'duration_years', 'ledd', 'updrs-ii', 'updrs-iii'
         ]
 
-        # ✅ Crea DataFrame con nomi di feature per sklearn
-        X = pd.DataFrame([data], columns=input_features)
+        # ✅ Conversione sicura e corretta
+        X = pd.DataFrame(
+            [[float(data[feature]) for feature in input_features]],
+            columns=input_features
+        )
 
         prediction = pipeline.predict(X)[0]
         prob = pipeline.predict_proba(X)[0][1]

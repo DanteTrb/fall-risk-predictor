@@ -2,7 +2,9 @@
 
 > A fullstack AI-powered web application to assess fall risk in patients with Parkinson's Disease.
 
-![Screenshot](./Screenshot%202025-06-13%20alle%2011.51.00_resized.png)
+## 🖼️ Demo Preview
+
+![Fall Risk Predictor Demo](./frontend/public/fallrisk_demo.png)
 
 ## 🚀 Project Overview
 

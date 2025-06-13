@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "https://fall-risk-predictor.onrender.com/api/$1"
+      }
+    ]
+  }
+  

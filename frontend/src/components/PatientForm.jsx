@@ -32,25 +32,20 @@ const PatientForm = () => {
   const [ranges, setRanges] = useState({});
 
   useEffect(() => {
-    axios.get('https://fall-risk-predictor.onrender.com/api/ranges/')
+    axios.get('/api/ranges/')
       .then(res => setRanges(res.data))
       .catch(err => console.error(err));
   }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const res = await axios.post('https://fall-risk-predictor.onrender.com/api/predict/', formData);
+      const res = await axios.post('/api/predict/', formData);
       setResult(res.data);
     } catch (error) {
       console.error(error);
     }
-  };
+  };  
 
   const inputStyle = {
     padding: '6px',

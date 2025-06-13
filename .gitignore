@@ -1,0 +1,20 @@
+# Mac & system files
+.DS_Store
+
+# DB
+db.sqlite3
+
+# Dataset
+data/
+
+# Env
+.venv/
+.env
+
+# Build output
+build/
+dist/
+node_modules/
+
+# Results non essenziali
+results/

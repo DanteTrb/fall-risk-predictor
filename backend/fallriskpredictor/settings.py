@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'fallrisk_api',  # 👈 registra la tua app qui
     'corsheaders',   # se usi React nel frontend
 ]

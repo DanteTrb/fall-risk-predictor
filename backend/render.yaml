@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: fallrisk-backend
+    name: fall-risk-predictor
     env: python
     rootDir: backend
     buildCommand: pip install -r requirements.txt

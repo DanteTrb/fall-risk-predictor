@@ -92,4 +92,4 @@ See LICENSE for full terms.
 
 ## 🤝 Contributing
 Pull requests and suggestions are welcome!
-If you're a clinician, data scientist, or ML researcher interested in fall risk, feel free to collaborate.
+If you're a clinician, data scientist, or ML researcher interested in neurodegenerative disorders, neuroscience and fall risk, feel free to collaborate.

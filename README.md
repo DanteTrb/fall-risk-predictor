@@ -93,3 +93,5 @@ See LICENSE for full terms.
 ## 🤝 Contributing
 Pull requests and suggestions are welcome!
 If you're a clinician, data scientist, or ML researcher interested in neurodegenerative disorders, neuroscience and fall risk, feel free to collaborate.
+
+This project integrates explainable AI and generative AI techniques into biomechanics and gait analysis, with a focus on Parkinson's disease.
